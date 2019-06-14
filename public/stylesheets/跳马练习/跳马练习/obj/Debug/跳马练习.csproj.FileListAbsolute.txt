@@ -1,0 +1,14 @@
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\跳马练习\跳马练习\bin\Debug\跳马练习.exe.config
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\跳马练习\跳马练习\bin\Debug\跳马练习.exe
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\跳马练习\跳马练习\bin\Debug\跳马练习.pdb
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.csprojAssemblyReference.cache
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.csproj.CoreCompileInputs.cache
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.exe
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.pdb
+D:\Bruce\class2second\地理信息系统算法基础\跳马\跳马练习\跳马练习\bin\Debug\跳马练习.exe.config
+D:\Bruce\class2second\地理信息系统算法基础\跳马\跳马练习\跳马练习\bin\Debug\跳马练习.exe
+D:\Bruce\class2second\地理信息系统算法基础\跳马\跳马练习\跳马练习\bin\Debug\跳马练习.pdb
+D:\Bruce\class2second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.csprojAssemblyReference.cache
+D:\Bruce\class2second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.csproj.CoreCompileInputs.cache
+D:\Bruce\class2second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.exe
+D:\Bruce\class2second\地理信息系统算法基础\跳马\跳马练习\跳马练习\obj\Debug\跳马练习.pdb

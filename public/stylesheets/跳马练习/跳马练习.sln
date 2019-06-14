@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "跳马练习", "跳马练习\跳马练习.csproj", "{2068BA21-4DB9-4705-9DCE-E35A9F2463EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2068BA21-4DB9-4705-9DCE-E35A9F2463EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2068BA21-4DB9-4705-9DCE-E35A9F2463EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2068BA21-4DB9-4705-9DCE-E35A9F2463EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2068BA21-4DB9-4705-9DCE-E35A9F2463EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {802D9354-917E-45B3-A4E5-55EB47BB5A39}
+	EndGlobalSection
+EndGlobal

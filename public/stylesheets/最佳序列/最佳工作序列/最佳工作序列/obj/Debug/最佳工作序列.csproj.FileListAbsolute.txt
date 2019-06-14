@@ -1,0 +1,29 @@
+F:\Study\大三上\GIS算法和基础-张宏\作业\9.15第一次课（跳马，序列）\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe.config
+F:\Study\大三上\GIS算法和基础-张宏\作业\9.15第一次课（跳马，序列）\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe
+F:\Study\大三上\GIS算法和基础-张宏\作业\9.15第一次课（跳马，序列）\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.pdb
+F:\Study\大三上\GIS算法和基础-张宏\作业\9.15第一次课（跳马，序列）\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.exe
+F:\Study\大三上\GIS算法和基础-张宏\作业\9.15第一次课（跳马，序列）\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.pdb
+C:\Users\Lenovo\Desktop\GIS算法\1跳马+工作序列\作业\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe.config
+C:\Users\Lenovo\Desktop\GIS算法\1跳马+工作序列\作业\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.exe
+C:\Users\Lenovo\Desktop\GIS算法\1跳马+工作序列\作业\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.pdb
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe.config
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.pdb
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.csprojAssemblyReference.cache
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.csproj.CoreCompileInputs.cache
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.exe
+D:\Bruce\class 2 second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.pdb
+D:\Bruce\class2second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe.config
+D:\Bruce\class2second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe
+D:\Bruce\class2second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.pdb
+D:\Bruce\class2second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.csprojAssemblyReference.cache
+D:\Bruce\class2second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.csproj.CoreCompileInputs.cache
+D:\Bruce\class2second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.exe
+D:\Bruce\class2second\地理信息系统算法基础\跳马\117143197Best-working-sequence\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.pdb
+C:\Users\17753\myapp\public\最佳序列\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe.config
+C:\Users\17753\myapp\public\最佳序列\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.exe
+C:\Users\17753\myapp\public\最佳序列\最佳工作序列\最佳工作序列\bin\Debug\最佳工作序列.pdb
+C:\Users\17753\myapp\public\最佳序列\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.csprojAssemblyReference.cache
+C:\Users\17753\myapp\public\最佳序列\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.csproj.CoreCompileInputs.cache
+C:\Users\17753\myapp\public\最佳序列\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.exe
+C:\Users\17753\myapp\public\最佳序列\最佳工作序列\最佳工作序列\obj\Debug\最佳工作序列.pdb
