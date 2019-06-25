@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>编码</title>
+		<meta charset="utf-8">
+		<!--viewport就是设备的屏幕上能用来显示我们的网页的那一块区域,content属性值，width可视域的宽度，值可为数字或关键词device-width. intial-scale:页面首次被显示是可视区域的缩放级别，取值1.0则页面按实际尺寸显示，无任何缩放-->
+		<style type="text/css">                  <!--属于css的嵌入式样式（即内部样式），可以定义该html的样式。-->
+			#div1{
+				margin: 0 auto;
+				background-color: purple;
+				font-size:50px;
+				width: 50%;
+				text-align: center;
+			}
+			.span1{
+				
+				width: 24.5%;
+				display: inline-block;
+			}
+			#div2{
+				margin: 0 auto;
+				font-size:15px;
+				width: 80%;
+			}
+			.span2{
+				width: 24.5%;
+				display: inline-block;
+			}
+		</style>
+	</head>
+        <body>
+		<h1 align="center"><font face="宋体" color="#CC0000" align="center">编码</font></h1>
+		<div id="div1">
+		<span class="span1"><input type="radio" class="radio" name="change" value="normal" onclick="getValue(this.value)">正常</span>
+		<span class="span1"><input type="radio" class="radio" name="change" value="rotate" onclick="getValue(this.value)">旋转</span>
+		<span class="span1"><input type="radio" class="radio" name="change" value="leftSlant" onclick="getValue(this.value)">左斜</span>
+	<span class="span1"><input type="radio" class="radio" name="change" value="shrug" onclick="getValue(this.value)">耸肩</span>
+	<span class="span1"><input type="radio" class="radio" name="change" value="boost" onclick="getValue(this.value)">放大</span>
+			<span class="span1"><input type="radio" class="radio" name="change" value="symmetry" onclick="getValue(this.value)">对称</span>
+		</div>
+		<br>
+		<div style="margin: 0 auto;width: 80%;">
+		<span style="width: 50%;float: left;"><canvas style="margin: 0 auto;" id="myCanvas1" width="500" height="500"></canvas></span>
+		<span style="width: 50%;float: right;"><canvas style="margin: 0 auto;" id="myCanvas2" width="500" height="500"></canvas></span>
+		</div>
+		<br>
+		<div id="div2">
+		<span class="span2"><input style="float: left;" id="fileInput1" type="file" onchange="processFiles(file1,canvas1)"></span>
+		<span class="span2"><button style="float: left;" type="button" onclick="processFiles(file1,canvas1)">刷新</button></span>
+		<!--上传文件，文件改变时运行processFiles函数-->
+		<span class="span2"><input style="float: left;" id="fileInput2" type="file" onchange="processFiles(file2,canvas2)"></span>
+		<!--上传文件，文件改变时运行processFiles函数-->
+		<span class="span2"><button style="float: left;" type="button" onclick="processFiles(file2,canvas2)">刷新</button></span>
+		</div>
+		<p style="width: 80%;"><small style="float: right;">10170316</small></p>
+		<script type="text/javascript">
+			var canvas1 = document.getElementById('myCanvas1');
+			var canvas2 = document.getElementById('myCanvas2');
+			var file1 = document.getElementById('fileInput1');
+			var file2 = document.getElementById('fileInput2');
+			var isDraw = false;
+			var isRotate = false;
+			var type;
+			var lines=new Array();
+		</script>
+            <canvas id="myCanvas1" width="320" height="320"></canvas>         
+            <canvas id="myCanvas2" width="320" height="320"></canvas>
+			<br>
+			<input id="fileInput1" type="file" onchange="processFiles(fileInput1,myCanvas1)"><!--上传文件，文件改变时运行processFiles函数-->
+			<input id="fileInput2" type="file" onchange="processFiles(fileInput2,myCanvas2)"><!--上传文件，文件改变时运行processFiles函数-->
+        <script>
+			function getValue(value) {
+				type = value;
+			}
+				function grid(canva)
+				{
+					//绘制网格函数
+					var x,y;
+					var canvas=canva;
+					var cxt=canvas.getContext('2d');
+					cxt.beginPath();
+					cxt.lineWidth=1;
+					for(y=0;y<=320;y+=20)
+					{
+						cxt.moveTo(0,y);
+						cxt.lineTo(320,y);					
+						for(x=0;x<=320;x+=20)
+						{
+							cxt.moveTo(x,0);
+							cxt.lineTo(x,320);
+						}
+					}
+					cxt.stroke();
+				}
+				//调用并绘制网格
+				grid(canvas1);
+				grid(canvas2);
+			</script>
+            <script>
+				var isDraw=false;
+                function processFiles(fileInput,myCanvas){
+					if(isDraw)
+					{
+						//判断是否已绘制，若已绘制则清除画布并重绘网格
+						var canvas=myCanvas;
+						var cxt=canvas.getContext('2d');
+						cxt.clearRect(0,0,canvas.width,canvas.height); 
+						grid(canvas);
+					}
+                    var file=fileInput.files[0];//获取文件
+                    var reader=new FileReader();
+                    reader.readAsText(file);//readAsText将文件读为文本，有两个参数，前一个为打开的第一个文件建立对象实例之后的指针，后一个默认参数为UTF-8
+                    reader.onload=function(e)//e为浏览器事件的处理机制
+                    {
+                        var str = this.result;//读取文本//将文件的值赋值给str,包含字母与数字
+                        var number = new Array();//新建一个数组
+                        number= digitalExtraction(str,number);//提取数字并存入数组
+                        draw(number,myCanvas);//画图
+                    }
+                    
+                }
+                //提取数字，并存入数组
+               function digitalExtraction(str,number){
+                    var heap= str.replace(/[^0-9.L]/ig,"A");//将字符"0"至"9"、"."和"L”"外的都用字符"A"来代替
+                    var numcharacter="";//存储数字字符
+                    var number =new Array();//提取数字数组
+                    var i=0;
+                    var flag=0;//heap字符串当前标记
+                    var n=0;//标识数字与字符转换位置
+                    var character=heap[flag];//获取字符串的一个字符
+					//逐字符读取字符串heap,并将数字以数的形式存储至number中，每一个线段用-1隔开，主要过滤掉回车符、"end"、","和"L"，并将字符转化为数字
+                    while(character!=null){
+                        if(character=="L"){
+                             number[i++]=-1;
+                             flag+=2;
+                             character=heap[flag];
+                         }
+                        if(character!="A"){
+                            n=1;
+                            numcharacter+=character;
+                          }
+                        else{
+                            if(n==1){
+							//主要是应对逗号
+                                number[i++]=parseFloat(numcharacter);
+                                numcharacter="";
+                                n=0;
+                            }
+                        }
+                         character=heap[++flag];
+                    }
+                   //以数组形式返回文件中的所有数字
+                    return number;
+               }
+               function draw(number,myCanvas){
+					var canvas=myCanvas;//获取画布元素
+                    var cxt=canvas.getContext('2d'); //getContext("2d") 对象是内建的 HTML5 对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法
+                    cxt.beginPath();
+					cxt.lineWidth=3;
+					var n= number.length;//获取数字的数目
+                    number[n]=-1;//在最后一个数后加入-1用以绘制出最后一条线
+                    var n= number.length;//重新获取number数组中的数字个数
+                    var flag=0;
+                    var x= new Array();
+                    var y =new Array();//x和y只存放一条线段中的点
+                    var j=0;
+					if (type == undefined || type == "normal") {
+					isRotate=false;
+					for (var i = 0; i < n; i++) {
+						if (number[i] != -1) {
+							x[j] = number[i] * 20;
+							y[j] = 320 - (number[++i] * 20);
+							j++;
+						} else {
+							cxt.moveTo(x[0], y[0]);
+							for (var k = 1; k < j; k++) {
+								cxt.lineTo(x[k], y[k]); //线条结束坐标					
+							}
+							cxt.stroke();
+							j = 0;
+						}
+					}
+				}
+				if(type=="rotate"&&(!isRotate)){
+					for (var i = 0; i < n; i++) {
+						if (number[i] != -1) {
+							x[j] = number[i] * 20;
+							y[j] = 320 - (number[++i] * 20);
+							var tempX=250+((x[j]-250)*Math.cos(5*Math.PI/180)-(y[j]-250)*Math.sin(5*Math.PI/180));
+							var tempY=250+((x[j]-250)*Math.sin(5*Math.PI/180)+(y[j]-250)*Math.cos(5*Math.PI/180));
+							x[j]=tempX;
+							y[j]=tempY;
+							lines[i-1]=x[j];
+							lines[i]=y[j];
+							j++;
+						} else {
+							lines[i]=-1;
+							cxt.moveTo(x[0], y[0]);
+							for (var k = 1; k < j; k++) {
+								cxt.lineTo(x[k], y[k]); //线条结束坐标					
+							}
+							cxt.stroke();
+							j = 0;
+						}
+					}
+					isRotate=true;
+				}
+				else{
+					if(type=="rotate"&&(isRotate)){
+						for (var i = 0; i < n; i++) {
+							if (lines[i] != -1) {
+								x[j] = lines[i];
+								y[j] = lines[++i];
+								var tempX=250+((x[j]-250)*Math.cos(5*Math.PI/180)-(y[j]-250)*Math.sin(5*Math.PI/180));
+								var tempY=250+((x[j]-250)*Math.sin(5*Math.PI/180)+(y[j]-250)*Math.cos(5*Math.PI/180));
+								x[j]=tempX;
+								y[j]=tempY;
+								lines[i-1]=x[j];
+								lines[i]=y[j];
+								j++;
+							} else {
+								cxt.moveTo(x[0], y[0]);
+								for (var k = 1; k < j; k++) {
+									cxt.lineTo(x[k], y[k]); //线条结束坐标					
+								}
+								cxt.stroke();
+								j = 0;
+							}
+						}
+					}
+				}
+				if(type=="leftSlant"){
+					isRotate=false;
+					for (var i = 0; i < n; i++) {
+						if (number[i] != -1) {
+							x[j] = number[i] * 20;
+							y[j] = 320 - (number[++i] * 20);
+							x[j]+=(-Math.tan(15*Math.PI/180))*y[j];
+							j++;
+						} else {
+							cxt.moveTo(x[0], y[0]);
+							for (var k = 1; k < j; k++) {
+								cxt.lineTo(x[k], y[k]); //线条结束坐标					
+							}
+							cxt.stroke();
+							j = 0;
+						}
+					}
+				}
+				if (type == "boost") {
+				isRotate=true;
+					for (var i = 0; i < n; i++) {
+						if (number[i] != -1) {
+							x[j] = ((number[i] - 8) * 1.1 + 8) * 20;
+							y[j] = (320 - (((number[++i] - 8) * 1.1 + 8) * 20));
+							//将放大后的数据保存下来以便连续变换
+							number[i - 1] = (number[i - 1] - 8) * 1.1 + 8;
+							number[i] = (number[i] - 8) * 1.1 + 8;
+							j++;
+						} else {
+							cxt.moveTo(x[0], y[0]);
+							for (var k = 1; k < j; k++) {
+								cxt.lineTo(x[k], y[k]); //线条结束坐标					
+							}
+							cxt.stroke();
+							j = 0;
+						}
+					}
+				}
+				if(type=="symmetry"){
+					for (var i = 0; i < n; i++) {
+						if (number[i] != -1) {
+							x[j] = number[++i] * 20;
+							y[j] =(320 - (number[i-1] * 20));
+							var tempX=140+((x[j]-200)*Math.cos(-90*Math.PI/180)-(y[j]-160)*Math.sin(-90*Math.PI/180));
+							var tempY=140+((x[j]-200)*Math.sin(-90*Math.PI/180)+(y[j]-160)*Math.cos(-90*Math.PI/180));
+							x[j]=tempX;
+							y[j]=tempY;
+							j++;
+						} else {
+							cxt.moveTo(x[0], y[0]);
+							for (var k = 1; k < j; k++) {
+								cxt.lineTo(x[k], y[k]); //线条结束坐标					
+							}
+							cxt.stroke();
+							j = 0;
+						}
+					}
+				}
+				if(type=="shrug"){
+					isRotate=false;
+					for (var i = 0; i < n; i++) {
+						if (number[i] != -1) {
+							x[j] = number[i] * 20;
+							y[j] = 320 - (number[++i] * 20);
+							y[j]+=(-0.2)*x[j];
+							j++;
+						} else {
+							cxt.moveTo(x[0], y[0]);
+							for (var k = 1; k < j; k++) {
+								cxt.lineTo(x[k], y[k]); //线条结束坐标					
+							}
+							cxt.stroke();
+							j = 0;
+						}
+					}
+				}
+				isDraw = true;
+			}
+                 
+            </script>   
+        </body>  
+</html>
